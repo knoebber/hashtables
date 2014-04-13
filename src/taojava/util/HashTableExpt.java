@@ -117,12 +117,12 @@ public class HashTableExpt
     HashTable<String, String> dict = new HashTable<String, String>(rept);
 
     // Most of the time, we don't care about the basic calls
-    dict.reportBasicCalls(true);
+    dict.reportBasicCalls(false);
 
     // Conduct some of the experiments
-    // repeatedSetExpt(pen, dict);
+    repeatedSetExpt(pen, dict);
     // matchingKeysExpt(pen, dict);
-    setExpt(pen, dict);
+    // setExpt(pen, dict);
     // removeExpt(pen, dict);
   } // main(String[])
 
