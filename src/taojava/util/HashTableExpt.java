@@ -118,9 +118,20 @@ public class HashTableExpt
 
     // Most of the time, we don't care about the basic calls
     dict.reportBasicCalls(false);
-
+    
     // Conduct some of the experiments
-    repeatedSetExpt(pen, dict);
+    //repeatedSetExpt(pen, dict);
+    dict.reportBasicCalls(true);
+    dict.set("alpha", "alpha");
+    dict.dump(pen);
+    dict.set("beta", "beta");
+    dict.dump(pen);
+    dict.set("bravo", "bravo");
+    dict.dump(pen);
+    dict.set("beta", "bravo");
+    dict.dump(pen);
+    dict.reportBasicCalls(false);
+    //dict.dump(pen);
     // matchingKeysExpt(pen, dict);
     // setExpt(pen, dict);
     // removeExpt(pen, dict);

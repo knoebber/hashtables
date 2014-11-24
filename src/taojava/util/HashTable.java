@@ -38,13 +38,14 @@ public class HashTable<K, V>
         [ ] Doesn't check for repeated keys in set.
         [ ] Doesn't check for matching key in get.
         [ ] Doesn't handle collisions.
-        [ ] The `expand` method is not implemented.
-        [ ] The `remove` method is not implemented.
 
       Features to add.
         [ ] A real implementation of containsKey.
         [ ] An iterator for the values.
         [ ] An iterator for the keys.
+        [ ] The `expand` method is not implemented.
+        [ ] The `remove` method is not implemented.
+
    */
 
   // +-----------+-------------------------------------------------------
@@ -210,7 +211,7 @@ public class HashTable<K, V>
    */
   public void clear()
   {
-    this.pairs = new Object[41];
+    this.pairs = new Object[10];
     this.size = 0;
   } // clear()
 
