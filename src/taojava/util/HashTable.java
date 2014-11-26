@@ -318,7 +318,16 @@ public class HashTable<K, V>
    */
   int find(K key)
   {
-    return Math.abs(key.hashCode()) % this.pairs.length;
+    int index = Math.abs(key.hashCode()) % this.pairs.length;
+
+    while (this.pairs[index] != null
+           && !key.equals(((KVPair) this.pairs[index]).key))
+      {
+        index += PROBE_OFFSET;
+        index = index % size;
+      }
+    return index;
+
   } // find(K)
 
   // +---------------+---------------------------------------------------
